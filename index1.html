@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Student Registration System" />
+    <meta name="author" content="Your Name" />
+    <title>Student Registration System</title>
+
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      header p {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      form {
+        display: grid;
+        gap: 15px;
+      }
+
+      label {
+        font-weight: bold;
+        color: #555;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus {
+        border-color: #4caf50;
+        outline: none;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        max-height: 400px;
+        overflow-y: auto;
+        display: block;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      td {
+        background-color: #f9f9f9;
+      }
+
+      tbody tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .actions button {
+        background-color: #f44336;
+        padding: 5px 10px;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .actions button:hover {
+        background-color: #e53935;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Student Registration System</h1>
+      <p>
+        Welcome to the Student Registration System. Register your details and
+        stay updated with your student profile.
+      </p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#registration-form">Register New Student</a></li>
+        <li><a href="#student-list">View Registered Students</a></li>
+      </ul>
+    </nav>
+
+    <!-- Registration Form Section -->
+    <section id="registration-form">
+      <h2>Register New Student</h2>
+      <form id="student-form">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" name="student-name" required />
+
+        <label for="student-id">Student ID:</label>
+        <input type="text" id="student-id" name="student-id" required />
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="contact-no">Contact No:</label>
+        <input
+          type="tel"
+          id="contact-no"
+          name="contact-no"
+          pattern="[0-9]{10}"
+          required
+        />
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <!-- Display Registered Students Section -->
+    <section id="student-list">
+      <h2>Registered Students</h2>
+      <table id="student-table">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Registered student records will be displayed here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Link to External JavaScript File -->
+    <script src="pro.js"></script>
+  </body>
+</html>
